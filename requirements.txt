@@ -1,0 +1,7 @@
+gradio
+requests
+itsdangerous
+ipykernel
+langchain
+langgraph
+langchain_openai 

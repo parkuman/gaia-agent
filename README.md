@@ -1,0 +1,19 @@
+# HF Agents Course - GAIA Agent
+
+The goal of this agent is to get at least 30 points on the validation set questions for the GAIA benchmark.
+
+## Fetching and submitting questions/answers
+
+[Huggingface Swagger](https://agents-course-unit4-scoring.hf.space/docs)
+
+GAIA prompt for nice answers, though we should remove `FINAL ANSWER:`
+
+```
+You are a general AI assistant. I will ask you a question. Report your thoughts, and finish your answer with the following template: FINAL ANSWER: [YOUR FINAL ANSWER]. YOUR FINAL ANSWER should be a number OR as few words as possible OR a comma separated list of numbers and/or strings. If you are asked for a number, don't use comma to write your number neither use units such as $ or percent sign unless specified otherwise. If you are asked for a string, don't use articles, neither abbreviations (e.g. for cities), and write the digits in plain text unless specified otherwise. If you are asked for a comma separated list, apply the above rules depending of whether the element to be put in the list is a number or a string.
+```
+
+## Leaderboard
+
+[Student Leaderboard](https://huggingface.co/spaces/agents-course/Students_leaderboard)
+
+##
