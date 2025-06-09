@@ -16,4 +16,13 @@ You are a general AI assistant. I will ask you a question. Report your thoughts,
 
 [Student Leaderboard](https://huggingface.co/spaces/agents-course/Students_leaderboard)
 
-##
+## TODO
+
+- [ ] python code execution sandbox
+- [ ] youtube video download and visual analyze
+- [ ] youtube video download and transcribe
+- [ ] audio file transcription
+- [ ] web search
+- [ ] actually fetch the attached file
+- [ ] analyse image .. ?
+- [ ] excel file reader

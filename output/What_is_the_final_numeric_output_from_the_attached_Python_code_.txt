@@ -21,19 +21,4 @@ Guidelines:
 What is the final numeric output from the attached Python code?
 
 ================================== Ai Message ==================================
-Tool Calls:
-  divide (tool_0_divide)
- Call ID: tool_0_divide
-  Args:
-    b: 2
-    a: 10
-
-================================= Tool Message =================================
-Name: divide
-
-5.0
-
-================================== Ai Message ==================================
-
-5.0
 

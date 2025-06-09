@@ -24,5 +24,5 @@ What does Teal'c say in response to the question "Isn't that hot?"
 
 ================================== Ai Message ==================================
 
-[TOOL_NEEDED] video question and answer
+[TOOL_NEEDED] I need a tool that can analyze a video and answer questions about its content. A video question and answer tool would be useful.
 

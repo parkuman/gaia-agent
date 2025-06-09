@@ -21,6 +21,76 @@ Guidelines:
 Who did the actor who played Ray in the Polish-language version of Everybody Loves Raymond play in Magda M.? Give only the first name.
 
 ================================== Ai Message ==================================
+Tool Calls:
+  wikipedia_tool (tool_0_wikipedia_tool)
+ Call ID: tool_0_wikipedia_tool
+  Args:
+    query: Wszyscy kochają Romana
 
-[TOOL_NEEDED] A tool that can answer questions about actors, television shows, and movies.
+================================= Tool Message =================================
+Name: wikipedia_tool
+
+Page: Wszyscy kochają Romana
+Summary: Wszyscy kochają Romana (Everybody Loves Roman) is a Polish television sitcom that premiered on TVN on 2 September 2011. The series is a Polish-language adaptation of the American Emmy Awards winner, Everybody Loves Raymond and stars Bartłomiej Kasprzykowski as the titular Roman, a newspaper sportswriter.
+The first four episodes were aired on Friday nights at 8:00 pm. On 30 September 2011 TVN announced the suspension of the series due to low ratings. Joanna Górska, TVN PR chief said that the network was looking for a new timeslot for the series. The last 11 episodes will be aired.
+
+
+
+Page: Everybody Loves Raymond
+Summary: Everybody Loves Raymond is an American television sitcom created by Philip Rosenthal that aired on CBS from September 13, 1996, to May 16, 2005, with a total of 210 episodes spanning nine seasons. It was produced by Where's Lunch and Worldwide Pants Incorporated, in association with HBO Independent Productions. The cast members were Ray Romano, Patricia Heaton, Brad Garrett, Doris Roberts, Peter Boyle, Madylin Sweeten, and Monica Horan. Most episodes of the nine-season series were filmed in front of a live studio audience.
+The series received positive reviews and has been ranked the 49th all-time funniest television comedy by Complex, the 60th best all-time series by TV Guide, the eleventh-best sitcom starring a stand-up comedian and the 35th best sitcom of all time by Rolling Stone, and (alongside South Park) the 63rd best written television series by the Writers Guild of America. In a Hollywood Reporter poll of all-time television programs surveying 779 actors, 365 producers and 268 directors, Everybody Loves Raymond ranked 96th.
+
+Page: Sumit Sambhal Lega
+Summary: Sumit Sambhal Lega (transl. Sumit Will Handle All) is an Indian Hindi-language sitcom television series which premiered on 31 August 2015 on StarPlus. The series is an Indian adaptation of the American sitcom Everybody Loves Raymond. Sony Entertainment Television acquired the series' syndication rights in May 2020.
+
+================================== Ai Message ==================================
+Tool Calls:
+  wikipedia_tool (tool_0_wikipedia_tool)
+ Call ID: tool_0_wikipedia_tool
+  Args:
+    query: Bartłomiej Kasprzykowski
+
+================================= Tool Message =================================
+Name: wikipedia_tool
+
+Page: Bartłomiej Kasprzykowski
+Summary: Bartłomiej "Bartek" Kasprzykowski (born 19 May 1977) is a Polish actor. He participated in Taniec z gwiazdami, the Polish version of Dancing with the Stars. He also won the fourth edition of Twoja twarz brzmi znajomo - the Polish version of Your Face Sounds Familiar.
+
+
+
+Page: Wszyscy kochają Romana
+Summary: Wszyscy kochają Romana (Everybody Loves Roman) is a Polish television sitcom that premiered on TVN on 2 September 2011. The series is a Polish-language adaptation of the American Emmy Awards winner, Everybody Loves Raymond and stars Bartłomiej Kasprzykowski as the titular Roman, a newspaper sportswriter.
+The first four episodes were aired on Friday nights at 8:00 pm. On 30 September 2011 TVN announced the suspension of the series due to low ratings. Joanna Górska, TVN PR chief said that the network was looking for a new timeslot for the series. The last 11 episodes will be aired.
+
+
+
+Page: Bartłomiej
+Summary: Bartłomiej is a Polish masculine given name, a cognate of Bartholomew. Diminutive forms of Bartłomiej include Bartek and Bartosz.
+
+================================== Ai Message ==================================
+Tool Calls:
+  wikipedia_tool (tool_0_wikipedia_tool)
+ Call ID: tool_0_wikipedia_tool
+  Args:
+    query: Magda M.
+
+================================= Tool Message =================================
+Name: wikipedia_tool
+
+Page: Magda M.
+Summary: Magda M. (Polish pronunciation: [ˈmaɡda ˈɛm]) was a Polish soap opera which aired on TVN from 2005 to 2007.
+
+
+
+Page: Magdalena Zawadzka
+Summary: Magdalena Zawadzka (born 29 October 1944) is a Polish stage and film actress. She is the wife of actor Gustaw Holoubek and the mother of cinematographer Jan Holoubek. She gained wide popularity after the 1968 film Colonel Wolodyjowski (Pan Wołodyjowski), in which she played the role of Basia Wołodyjowska.
+Her cousin is Australian actress Magda Szubanski.
+Notable film roles include Mazepa (1976), Na dobre i na złe TV series (2002), Ryś (2007), and Magda M. TV series (Season 4, 2007).
+
+Page: Magda (given name)
+Summary: Magda is a feminine given name. It is a short form (hypocorism) of names such as Magdalena and Magdalene. Notable people with the name include:
+
+================================== Ai Message ==================================
+
+Piotr
 

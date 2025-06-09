@@ -21,6 +21,30 @@ Guidelines:
 What is the surname of the equine veterinarian mentioned in 1.E Exercises from the chemistry materials licensed by Marisa Alviar-Agnew & Henry Agnew under the CK-12 license in LibreText's Introductory Chemistry materials as compiled 08/21/2023?
 
 ================================== Ai Message ==================================
+Tool Calls:
+  wikipedia_tool (tool_0_wikipedia_tool)
+ Call ID: tool_0_wikipedia_tool
+  Args:
+    query: CK-12 license Introductory Chemistry Marisa Alviar-Agnew Henry Agnew equine veterinarian
 
-[TOOL_NEEDED] I need a tool to search for and retrieve information from online sources, specifically to find the text of "1.E Exercises from the chemistry materials licensed by Marisa Alviar-Agnew & Henry Agnew under the CK-12 license in LibreText's Introductory Chemistry materials as compiled 08/21/2023".
+================================= Tool Message =================================
+Name: wikipedia_tool
+
+No good Wikipedia Search Result was found
+
+================================== Ai Message ==================================
+Tool Calls:
+  wikipedia_tool (tool_0_wikipedia_tool)
+ Call ID: tool_0_wikipedia_tool
+  Args:
+    query: Licensing of Introductory Chemistry materials by Marisa Alviar-Agnew & Henry Agnew under CK-12 license
+
+================================= Tool Message =================================
+Name: wikipedia_tool
+
+No good Wikipedia Search Result was found
+
+================================== Ai Message ==================================
+
+[TOOL_NEEDED] I need a tool that can search the contents of LibreText's Introductory Chemistry materials.
 

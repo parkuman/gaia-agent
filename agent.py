@@ -7,6 +7,20 @@ from langgraph.graph import MessagesState
 from langgraph.checkpoint.memory import MemorySaver
 from langchain_core.messages import HumanMessage, SystemMessage
 from langgraph.prebuilt import tools_condition, ToolNode
+from langchain_community.tools import WikipediaQueryRun
+from langchain_community.utilities import WikipediaAPIWrapper
+
+wikipedia = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())
+
+
+def wikipedia_tool(query: str) -> str:
+    """Run a Wikipedia query and return the result.
+    Args:
+        query: The query to run.
+    Returns:
+        The result of the query.
+    """
+    return wikipedia.run(query)
 
 
 def multiply(a: float, b: float) -> float:
@@ -69,7 +83,7 @@ class Agent:
             model_name (str): The name of the LLM model to use
         """
 
-        self.tools = [add, subtract, multiply, divide, modulo]
+        self.tools = [wikipedia_tool, add, subtract, multiply, divide, modulo]
         self.llm = ChatOpenRouter(model_name=model_name)
         self.llm_with_tools = self.llm.bind_tools(self.tools)
 
