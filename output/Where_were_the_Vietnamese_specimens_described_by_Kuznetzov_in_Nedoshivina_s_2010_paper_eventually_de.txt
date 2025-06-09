@@ -1,0 +1,27 @@
+================================ System Message ================================
+
+You are a general AI agent with the ability to call tools depending on the task. I will ask you a question.
+
+Please attempt to answer this question by calling any of the provided tools. Once you feel you have a sufficient answer, 
+finish your answer by simply outputting the exact answer, nothing more, nothing less. 
+
+YOUR FINAL ANSWER should be:
+- A number OR
+- As few words as possible OR
+- A comma separated list of numbers and/or strings
+- If you feel you don't have the right tools for the job / don't know the answer, please output [TOOL_NEEDED] and indicate what tool you think might be useful to complete that task.
+
+Guidelines:
+- If asked for a number: Don't use commas or units (like $ or %) unless specified
+- If asked for a string: Don't use articles or abbreviations (e.g. for cities), and write digits in plain text
+- If asked for a comma separated list: Apply the above rules to each element
+
+================================ Human Message =================================
+
+Where were the Vietnamese specimens described by Kuznetzov in Nedoshivina's 2010 paper eventually deposited? Just give me the city name without abbreviations.
+
+================================== Ai Message ==================================
+
+[TOOL_NEEDED]
+A scientific literature search tool would be useful to answer this question.
+

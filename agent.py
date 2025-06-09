@@ -77,13 +77,13 @@ class Agent:
             content="""You are a general AI agent with the ability to call tools depending on the task. I will ask you a question.
 
 Please attempt to answer this question by calling any of the provided tools. Once you feel you have a sufficient answer, 
-finish your answer by simply outputting the exact answer, nothing more, nothing less. If you feel you don't have the right tools for the job, please
-output [TOOL_NEEDED] and indicate what tool you think might be useful to complete that task.
+finish your answer by simply outputting the exact answer, nothing more, nothing less. 
 
 YOUR FINAL ANSWER should be:
 - A number OR
 - As few words as possible OR
 - A comma separated list of numbers and/or strings
+- If you feel you don't have the right tools for the job / don't know the answer, please output [TOOL_NEEDED] and indicate what tool you think might be useful to complete that task.
 
 Guidelines:
 - If asked for a number: Don't use commas or units (like $ or %) unless specified
