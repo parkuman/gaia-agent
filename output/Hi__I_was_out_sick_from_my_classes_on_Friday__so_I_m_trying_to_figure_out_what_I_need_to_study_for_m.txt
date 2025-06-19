@@ -24,5 +24,6 @@ Could you please listen to the recording for me and tell me the page numbers I'm
 
 ================================== Ai Message ==================================
 
-[TOOL_NEEDED] I need a tool that can process audio files.
+[TOOL_NEEDED]
+Audio transcription capabilities would be helpful.
 

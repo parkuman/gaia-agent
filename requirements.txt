@@ -7,3 +7,7 @@ langgraph
 langchain_openai 
 langchain-community
 wikipedia
+duckduckgo-search
+python-dotenv
+tavily-python
+arxiv

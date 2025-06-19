@@ -1,28 +1,64 @@
 import os
 import re
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from openrouter import ChatOpenRouter
 from langgraph.graph import StateGraph, START
 from langgraph.graph import MessagesState
 from langgraph.checkpoint.memory import MemorySaver
 from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_core.tools import tool
 from langgraph.prebuilt import tools_condition, ToolNode
-from langchain_community.tools import WikipediaQueryRun
-from langchain_community.utilities import WikipediaAPIWrapper
 
-wikipedia = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())
+from langchain_community.document_loaders import WikipediaLoader, ArxivLoader
+from langchain_community.tools.tavily_search import TavilySearchResults
 
-
-def wikipedia_tool(query: str) -> str:
-    """Run a Wikipedia query and return the result.
+@tool
+def wikipedia_search_tool(query: str) -> str:
+    """Query Wikipedia and return a max of 2 results.
     Args:
-        query: The query to run.
-    Returns:
-        The result of the query.
+        query: The search query.
+    Returns: 
+        the wikipedia documents most relevant to the query
     """
-    return wikipedia.run(query)
+    wiki_docs = WikipediaLoader(query=query, load_max_docs=2).load()
+    formatted_search_docs = "\n\n---\n\n".join(
+        [
+            f'<Document source="{doc.metadata["source"]}" page="{doc.metadata.get("page", "")}"/>\n{doc.page_content}\n</Document>'
+            for doc in wiki_docs
+        ]
+    )
+    return {"wiki_results": formatted_search_docs}
 
 
+@tool
+def web_search_tool(query: str) -> str:
+    """Search Tavily for a query and return maximum 3 results.
+    Args:
+        query: The search query."""
+    search_docs = TavilySearchResults(max_results=3).invoke(input=query)
+    return {"web_results": search_docs}
+
+
+@tool
+def arxiv_search_tool(query: str) -> str:
+    """Query Arxiv and return a max of 3 results.
+    Args:
+        query: The search query.
+    """
+    arxiv_docs = ArxivLoader(query=query, load_max_docs=3).load()
+    formatted_search_docs = "\n\n---\n\n".join(
+        [
+            f'<Document source="{doc.metadata["source"]}" page="{doc.metadata.get("page", "")}"/>\n{doc.page_content[:1000]}\n</Document>'
+            for doc in arxiv_docs
+        ]
+    )
+    return {"arxiv_results": formatted_search_docs}
+
+
+@tool
 def multiply(a: float, b: float) -> float:
     """multiplies two numbers and returns the result
 
@@ -33,6 +69,7 @@ def multiply(a: float, b: float) -> float:
     return a * b
 
 
+@tool
 def divide(a: float, b: float) -> float:
     """divides two numbers and returns the result
 
@@ -43,6 +80,7 @@ def divide(a: float, b: float) -> float:
     return a / b
 
 
+@tool
 def add(a: float, b: float) -> float:
     """adds two numbers and returns the result
 
@@ -53,6 +91,7 @@ def add(a: float, b: float) -> float:
     return a + b
 
 
+@tool
 def subtract(a: float, b: float) -> float:
     """subtracts b from a and returns the result
 
@@ -63,6 +102,7 @@ def subtract(a: float, b: float) -> float:
     return a - b
 
 
+@tool
 def modulo(a: float, b: float) -> float:
     """returns the result of a modulo b
 
@@ -83,7 +123,16 @@ class Agent:
             model_name (str): The name of the LLM model to use
         """
 
-        self.tools = [wikipedia_tool, add, subtract, multiply, divide, modulo]
+        self.tools = [
+                        wikipedia_search_tool, 
+                        arxiv_search_tool, 
+                        web_search_tool, 
+                        add, 
+                        subtract, 
+                        multiply, 
+                        divide, 
+                        modulo
+                    ]
         self.llm = ChatOpenRouter(model_name=model_name)
         self.llm_with_tools = self.llm.bind_tools(self.tools)
 

@@ -22,75 +22,29 @@ Who did the actor who played Ray in the Polish-language version of Everybody Lov
 
 ================================== Ai Message ==================================
 Tool Calls:
-  wikipedia_tool (tool_0_wikipedia_tool)
- Call ID: tool_0_wikipedia_tool
+  web_search_tool (tool_0_web_search_tool)
+ Call ID: tool_0_web_search_tool
   Args:
-    query: Wszyscy kochają Romana
+    query: Everybody Loves Raymond Polish version cast
 
 ================================= Tool Message =================================
-Name: wikipedia_tool
+Name: web_search_tool
 
-Page: Wszyscy kochają Romana
-Summary: Wszyscy kochają Romana (Everybody Loves Roman) is a Polish television sitcom that premiered on TVN on 2 September 2011. The series is a Polish-language adaptation of the American Emmy Awards winner, Everybody Loves Raymond and stars Bartłomiej Kasprzykowski as the titular Roman, a newspaper sportswriter.
-The first four episodes were aired on Friday nights at 8:00 pm. On 30 September 2011 TVN announced the suspension of the series due to low ratings. Joanna Górska, TVN PR chief said that the network was looking for a new timeslot for the series. The last 11 episodes will be aired.
-
-
-
-Page: Everybody Loves Raymond
-Summary: Everybody Loves Raymond is an American television sitcom created by Philip Rosenthal that aired on CBS from September 13, 1996, to May 16, 2005, with a total of 210 episodes spanning nine seasons. It was produced by Where's Lunch and Worldwide Pants Incorporated, in association with HBO Independent Productions. The cast members were Ray Romano, Patricia Heaton, Brad Garrett, Doris Roberts, Peter Boyle, Madylin Sweeten, and Monica Horan. Most episodes of the nine-season series were filmed in front of a live studio audience.
-The series received positive reviews and has been ranked the 49th all-time funniest television comedy by Complex, the 60th best all-time series by TV Guide, the eleventh-best sitcom starring a stand-up comedian and the 35th best sitcom of all time by Rolling Stone, and (alongside South Park) the 63rd best written television series by the Writers Guild of America. In a Hollywood Reporter poll of all-time television programs surveying 779 actors, 365 producers and 268 directors, Everybody Loves Raymond ranked 96th.
-
-Page: Sumit Sambhal Lega
-Summary: Sumit Sambhal Lega (transl. Sumit Will Handle All) is an Indian Hindi-language sitcom television series which premiered on 31 August 2015 on StarPlus. The series is an Indian adaptation of the American sitcom Everybody Loves Raymond. Sony Entertainment Television acquired the series' syndication rights in May 2020.
+{"web_results": [{"title": "Wszyscy kochają Romana (TV Series) - TMDB", "url": "https://www.themoviedb.org/tv/40281-wszyscy-kochaj-romana", "content": "Wszyscy kochają Romana is a Polish television sitcom that premiered on TVN on September 2, 2011. The series is a Polish-language adaptation of the American Emmy Awards winner, Everybody Loves Raymond and stars Bartłomiej Kasprzykowski as titular Roman, a newspaper sportswriter.", "score": 0.87166095}, {"title": "Wszyscy kochają Romana - Wikipedia", "url": "https://en.wikipedia.org/wiki/Wszyscy_kochaj%C4%85_Romana", "content": "***Wszyscy kochają Romana*** (*Everybody Loves Roman*) is a Polish television [sitcom](/wiki/Sitcom \"Sitcom\") that premiered on [TVN](/wiki/TVN_(Poland) \"TVN (Poland)\") on 2 September 2011.[[1]](#cite_note-1)[[2]](#cite_note-episodes-2) The series is a Polish-language adaptation of the American [Emmy Awards](/wiki/Emmy_Awards \"Emmy Awards\") winner, *[Everybody Loves Raymond](/wiki/Everybody_Loves_Raymond \"Everybody Loves Raymond\")* and stars [Bartłomiej [...] | Starring | * [Bartłomiej Kasprzykowski](/wiki/Bart%C5%82omiej_Kasprzykowski \"Bartłomiej Kasprzykowski\") * [Aneta Todorczuk-Perchuć](/wiki/Aneta_Todorczuk-Perchu%C4%87 \"Aneta Todorczuk-Perchuć\") * [Anna Seniuk](/wiki/Anna_Seniuk \"Anna Seniuk\") * [Joachim Lamża](/w/index.php?title=Joachim_Lam%C5%BCa&action=edit&redlink=1 \"Joachim Lamża (page does not exist)\") * [Tede](/wiki/Tede_(rapper) \"Tede (rapper)\") |\n| Country of origin | Poland |\n| Original language | Polish |\n| No. of seasons | 1 |", "score": 0.826278}, {"title": "'Everybody Loves Raymond' Gets Israeli And Polish Versions", "url": "https://deadline.com/2011/04/everybody-loves-raymond-gets-israeli-and-polish-versions-119751/", "content": "*   [### 'On Call' Done On Prime Video After Renewal Talks Fall Through, Being Shopped To Other Buyers ![Image 27](https://deadline.com/wp-content/uploads/2024/10/Troian-Bellisario-Traci-Harmon-Brandon-Larracuente-Alex-Diaz-in-On-Call-_-Photo-Credit_-Amazon-MGM-Studios-.jpg?w=200&h=112&crop=1)](https://deadline.com/2025/05/on-call-canceled-prime-video-shopped-new-home-peacock-1236392124/) [...] *   [8 Javier Bardem, Penelope Cruz & Pedro Almodovar Among Stars Signing Open Letter In Support Of Exiting Movistar Exec Domingo Corral – Reports ![Image 23](https://deadline.com/wp-content/uploads/2025/05/Domingo-Corral.jpg?w=150)](https://deadline.com/2025/05/bardem-cruz-sign-open-letter-supporting-domingo-corral-1236389728/) [...] *   ### [Taylor Swift Subpoenaed As Part Of Blake Lively-Justin Baldoni Legal Battle](https://deadline.com/category/legal/)\n    \n    ![Image 8](https://deadline.com/wp-content/uploads/2025/05/livley-taylor-swift-2023-2-getty.jpg?w=100&h=100&crop=1)\n    \n*   ### [Josh Charles To Star In Fox Adaptation Of UK Hit ‘Doc Martin’ Ordered To Series](https://deadline.com/2025/05/josh-charles-doc-martin-remake-fox-1236391628/)", "score": 0.6554468}]}
 
 ================================== Ai Message ==================================
 Tool Calls:
-  wikipedia_tool (tool_0_wikipedia_tool)
- Call ID: tool_0_wikipedia_tool
+  web_search_tool (tool_0_web_search_tool)
+ Call ID: tool_0_web_search_tool
   Args:
-    query: Bartłomiej Kasprzykowski
+    query: Bartłomiej Kasprzykowski Magda M.
 
 ================================= Tool Message =================================
-Name: wikipedia_tool
+Name: web_search_tool
 
-Page: Bartłomiej Kasprzykowski
-Summary: Bartłomiej "Bartek" Kasprzykowski (born 19 May 1977) is a Polish actor. He participated in Taniec z gwiazdami, the Polish version of Dancing with the Stars. He also won the fourth edition of Twoja twarz brzmi znajomo - the Polish version of Your Face Sounds Familiar.
-
-
-
-Page: Wszyscy kochają Romana
-Summary: Wszyscy kochają Romana (Everybody Loves Roman) is a Polish television sitcom that premiered on TVN on 2 September 2011. The series is a Polish-language adaptation of the American Emmy Awards winner, Everybody Loves Raymond and stars Bartłomiej Kasprzykowski as the titular Roman, a newspaper sportswriter.
-The first four episodes were aired on Friday nights at 8:00 pm. On 30 September 2011 TVN announced the suspension of the series due to low ratings. Joanna Górska, TVN PR chief said that the network was looking for a new timeslot for the series. The last 11 episodes will be aired.
-
-
-
-Page: Bartłomiej
-Summary: Bartłomiej is a Polish masculine given name, a cognate of Bartholomew. Diminutive forms of Bartłomiej include Bartek and Bartosz.
-
-================================== Ai Message ==================================
-Tool Calls:
-  wikipedia_tool (tool_0_wikipedia_tool)
- Call ID: tool_0_wikipedia_tool
-  Args:
-    query: Magda M.
-
-================================= Tool Message =================================
-Name: wikipedia_tool
-
-Page: Magda M.
-Summary: Magda M. (Polish pronunciation: [ˈmaɡda ˈɛm]) was a Polish soap opera which aired on TVN from 2005 to 2007.
-
-
-
-Page: Magdalena Zawadzka
-Summary: Magdalena Zawadzka (born 29 October 1944) is a Polish stage and film actress. She is the wife of actor Gustaw Holoubek and the mother of cinematographer Jan Holoubek. She gained wide popularity after the 1968 film Colonel Wolodyjowski (Pan Wołodyjowski), in which she played the role of Basia Wołodyjowska.
-Her cousin is Australian actress Magda Szubanski.
-Notable film roles include Mazepa (1976), Na dobre i na złe TV series (2002), Ryś (2007), and Magda M. TV series (Season 4, 2007).
-
-Page: Magda (given name)
-Summary: Magda is a feminine given name. It is a short form (hypocorism) of names such as Magdalena and Magdalene. Notable people with the name include:
+{"web_results": [{"title": "\"Filmowe duety\": Bujakiewicz i Kasprzykowski wspominają Magdę M.", "url": "https://tvnfabula.pl/aktualnosci/filmowe-duety-bujakiewicz-i-kasprzykowski-wspominaja-magde-m-st7886559", "content": "Bartłomiej Kasprzykowski aktorstwem zainteresował się już jako mały chłopiec. Zanim jednak zaczął realizować się w tym kierunku, marzył o zawodzie pilota, strażaka czy kosmonauty. Jest absolwentem wrocławskiej PWST. W latach 2005–2007 grał Wojciecha w serialu TVN Magda M.. W 2007 za rolę w spektaklu Łukasza Witt-Michałowskiego Kamienie w kieszeniach otrzymał Grand Prix na Przeglądzie Teatrów Małych Form „Kontrapunkt” w Szczecinie i Grand Prix na Festiwalu Wiosna Teatralna w Bielsku-Białej. [...] **Na ekranie stworzyli duet idealny. Widzowie pokochali Mariolkę i Wojtka z serialu \"Magda M.\". Katarzyna Bujakiewicz i Bartłomiej Kasprzykowski wspominają produkcję sprzed lat. Zobaczcie przedpremierowy fragment programu \"Filmowe duety\".**\n\nKatarzyna Bujakiewicz i Bartłomiej Kasprzykowski byli gośćmi programu \"Filmowe duety\". Podczas spotkania rozmawiali o swoim pierwszym spotkaniu, pracy przy serialu \"Magda M.\" i zawodowych marzeniach. [...] Aktorzy zagrali w \"Magdzie M.\" parę przyjaciół: Mariolkę i Wojtka. Z czasem ich relacja przerodziła się w coś więcej. Katarzyna Bujakiewicz tak mówi o tej produkcji: **\"To był świetny casting i to był pierwszy serial chyba w Polsce, który był zrobiony od początku do końca. I zostaliśmy gwiazdami rocka wszyscy\".** Bartek Kasprzykowski dodaje: **\"Fajną rzeczą było to, że myśmy wszyscy podczas tej pracy - w sumie my w trójkę: ty, ja i Małasz (Paweł Małaszyński) stworzyliśmy takie combo\".**", "score": 0.7915799}, {"title": "'Magda M.' wróci z nowymi odcinkami do TVN? Aktorzy zabrali głos", "url": "https://www.plotek.pl/plotek/7,111485,30551339,magda-m-wroci-z-nowymi-odcinkami-aktorzy-zabrali-glos.html", "content": "[Bartosz Pańczyk](https://www.plotek.pl/plotek/autor/642a8f1f1d3d86313e25e70c)\n\n2 stycznia 2024, 19:46\n\nNiespełna dwie dekady temu, \"Magda M.\" biła rekordy popularności w TVN. Czy jest szansa na jej reaktywację? Bartłomiej Kasprzykowski rozmawiał niedawno na ten temat z ekipą serialu.\n\n![Image 2: Plan serialu 'Magda M.'](https://bi.im-g.pl/im/4d/22/1d/z30551373IH,Plan-serialu--Magda-M--.jpg)\n\nFot. Kapif.pl\n\nOtwórz galerię (7) \n\nREKLAMA\n\nREKLAMA [...] Serial \"Magda M.\" z [Joanną Brodzik](https://www.plotek.pl/plotek/7,154063,30349389,brodzik-o-wstrzemiezliwosci-medialnej-wyskocze-z-szuflady.html) w tytułowej roli, można było oglądać na antenie [TVN](https://www.plotek.pl/TVN#anchorLink) w latach 2005-2007. Produkcja doczekała się 55 odcinków i według Bartłomieja Kasprzykowskiego, nie powinna już mieć ani jednego odcinka więcej. - Myślę, że do Magdy M. nie ma powrotu, ale to moje osobiste zdanie. Może ktoś wymyśli, jakby to miało wyglądać. [...] W 2021 roku losy [\"Magdy M.\"](https://www.plotek.pl/plotek/7,154063,28882569,17-lat-temu-zaczeto-emitowac-magde-m-co-slychac-u-gwiazd.html) doczekały się kontynuacji w wersji książkowej autorstwa Radosława Figury. Fani serialu niestrudzenie mają nadzieję, że uda się je zekranizować. Entuzjastą tego pomysłu nie jest jednak [Bartłomiej Kasprzykowski](https://www.plotek.pl/plotek/7,154063,30487050,kasprzykowski-ocenia-zwolnienia-w-tvp-wie-kto-powinien-zostac.html). Aktor w serialu wcielał się w", "score": 0.72395444}, {"title": "Bartłomiej Kasprzykowski - Filmweb", "url": "https://www.filmweb.pl/person/Bart%C5%82omiej+Kasprzykowski-10101", "content": "### [Magda M.](/serial/Magda+M.-2005-236958)\n\n![Bartłomiej Kasprzykowski / Przyjaciółki](https://fwcdn.pl/fpo/23/77/652377/8168870.7.webp)\n\n### [Przyjaciółki](/serial/Przyjaci%C3%B3%C5%82ki-2012-652377)\n\n![Bartłomiej Kasprzykowski / Teraz albo nigdy!](https://fwcdn.pl/fpo/97/33/469733/7241164_2.7.webp)\n\n### [Teraz albo nigdy!](/serial/Teraz+albo+nigdy-2008-469733)\n\n![Bartłomiej Kasprzykowski / Czas honoru - Powstanie](https://fwcdn.pl/fpo/62/33/716233/8008192_1.7.webp) [...] ### [Karol - człowiek, który został papieżem](/film/Karol+cz%C5%82owiek%2C+kt%C3%B3ry+zosta%C5%82+papie%C5%BCem-2005-149809)\n\n![Bartłomiej Kasprzykowski / Czas honoru](https://fwcdn.pl/fpo/02/93/470293/7334327_1.7.webp)\n\n### [Czas honoru](/serial/Czas+honoru-2008-470293)\n\n![Bartłomiej Kasprzykowski / Ranczo](https://fwcdn.pl/fpo/27/74/262774/7222408_2.7.webp)\n\n### [Ranczo](/serial/Ranczo-2006-262774)\n\n![Bartłomiej Kasprzykowski / Magda M.](https://fwcdn.pl/fpo/69/58/236958/7129814_1.7.webp) [...] Jeżeli miarą dobrego aktorstwa jest to, że w każdej kolejnej roli widzimy przemianę, nową twarz i odczuwamy jakiekolwiek emocje, to pan Bartłomiej jest rewelacyjnym aktorem. Niestety widziałam go w może w kilku produkcjach, ale za każdym razem nie można było zignorować jego obecności na szklanym ekranie. W Magdzie M....\n\n![Kansas_City_Shuffle](https://fwcdn.pl/user/02/06/2820206/2820206.2.jpg)\n\n### [Nieciekawy.](/person/Bart%C5%82omiej+Kasprzykowski-10101/discussion/Nieciekawy.-3014668)", "score": 0.680136}]}
 
 ================================== Ai Message ==================================
 
-Piotr
+Wojciech
 

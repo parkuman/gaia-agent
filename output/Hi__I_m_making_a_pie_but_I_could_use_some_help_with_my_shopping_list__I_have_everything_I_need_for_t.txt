@@ -26,6 +26,5 @@ Please format your response as a comma separated list of ingredients. Also, plea
 
 ================================== Ai Message ==================================
 
-[TOOL_NEEDED]
-A tool that can transcribe audio files would be useful to complete this task.
+[TOOL_NEEDED] a tool to transcribe audio to text
 

@@ -22,5 +22,5 @@ In the video https://www.youtube.com/watch?v=L1vXCYZAYYM, what is the highest nu
 
 ================================== Ai Message ==================================
 
-[TOOL_NEEDED] Youtube video analysis tool
+[TOOL_NEEDED] A tool that can analyze the content of a video.
 

@@ -26,109 +26,17 @@ I need to make headings for the fruits and vegetables. Could you please create a
 
 ================================== Ai Message ==================================
 Tool Calls:
-  wikipedia_tool (tool_0_wikipedia_tool)
- Call ID: tool_0_wikipedia_tool
+  web_search_tool (tool_0_web_search_tool)
+ Call ID: tool_0_web_search_tool
   Args:
-    query: sweet potato
+    query: botanical definition of fruit vs vegetable
 
 ================================= Tool Message =================================
-Name: wikipedia_tool
+Name: web_search_tool
 
-Page: Sweet potato
-Summary: The sweet potato or sweetpotato (Ipomoea batatas) is a dicotyledonous plant that belongs to the bindweed or morning glory family, Convolvulaceae. Its large, starchy, sweet-tasting tuberous roots are used as a root vegetable. The young shoots and leaves are sometimes eaten as greens. Cultivars of the sweet potato have been bred to bear tubers with flesh and skin of various colors. Sweet potato is only distantly related to the common potato (Solanum tuberosum), both being in the order Solanales. Although darker sweet potatoes are often referred to as "yams" in parts of North America, the species is even more distant from the true yams, which are monocots in the order Dioscoreales.
-The sweet potato is native to the tropical regions of South America in what is present-day Ecuador. Of the approximately 50 genera and more than 1,000 species of Convolvulaceae, I. batatas is the only crop plant of major importance—some others are used locally (e.g., I. aquatica "kangkong" as a green vegetable), but many are poisonous. The genus Ipomoea that contains the sweet potato also includes several garden flowers called morning glories, but that term is not usually extended to I. batatas. Some cultivars of I. batatas are grown as ornamental plants under the name tuberous morning glory, and used in a horticultural context. Sweet potatoes can also be called yams in North America. When soft varieties were first grown commercially there, there was a need to differentiate between the two. Enslaved Africans had already been calling the 'soft' sweet potatoes 'yams' because they resembled the unrelated yams in Africa. Thus, 'soft' sweet potatoes were referred to as 'yams' to distinguish them from the 'firm' varieties.
-
-
-
-Page: Sweet potato pie
-Summary: Sweet potato pie is a traditional dessert, originating in the Southern United States. It is often served during the American holiday season, especially at Thanksgiving and Christmas in place of pumpkin pie, which is more traditional in other regions of the United States. 
-It is made in an open pie shell without a top crust. The filling consists of mashed sweet potatoes; evaporated milk; sugar; spices such as cinnamon, ginger, and nutmeg; and eggs. The baked custard filling may vary from light and silky to dense, depending on the recipe's ratio of sweet potato, milk and eggs.
-
-Page: List of sweet potato cultivars
-Summary: This list of sweet potato cultivars provides some information about varieties and cultivars of sweet potato (Ipomoea batatas). The sweet potato was first domesticated in the Americas more than 5,000 years ago. As of 2013, there are approximately 7,000 sweet potato cultivars. People grow sweet potato in many parts of the world, including New Zealand, Australia, the Philippines, Japan, Hawaii, China, and North America. However, sweet potato is not widely cultivated in Europe.
-People breed sweet potatoes mainly either for food (their nutritious storage roots) or for their attractive vines. (The variety 'Vardaman' is grown for both.) The first table below lists sweet potato cultivars grown for their edible roots; the second table lists cultivars bred as ornamental vines. In the first table, the Parentage column briefly explains how the sweet potato cultivar was bred. Sweet potato plants with desirable traits are selectively bred to produce new cultivars.
-Sweet potato cultivars differ in many ways. One way people compare them is by the size, shape, and color of the roots. The more orange the flesh of a sweet potato root is, the more nutritious carotene it has. (Humans metabolize carotene into vitamin A.) The skin of a sweet potato root is a different color than the flesh. The biological word for the outer skin is epidermis; the flesh is called the pith or medulla. The first table below has a general description of the color of the root's flesh and skin.
-In the mid-20th century, sweet potato growers in the Southern United States began marketing orange-fleshed sweet p
-
-================================== Ai Message ==================================
-Tool Calls:
-  wikipedia_tool (tool_0_wikipedia_tool)
- Call ID: tool_0_wikipedia_tool
-  Args:
-    query: green bean
-
-================================= Tool Message =================================
-Name: wikipedia_tool
-
-Page: Green bean
-Summary: Green beans are young, unripe fruits of various cultivars of the common bean (Phaseolus vulgaris), although immature or young pods of the runner bean (Phaseolus coccineus), yardlong bean (Vigna unguiculata subsp. sesquipedalis), and hyacinth bean (Lablab purpureus) are used in a similar way. Green beans are known by many common names, including French beans, string beans (although most modern varieties are "stringless"), and snap beans or simply "snaps." In the Philippines, they are also known as "Baguio beans" or "habichuelas" to distinguish them from yardlong beans.
-They are distinguished from the many other varieties of beans in that green beans are harvested and consumed with their enclosing pods before the bean seeds inside have fully matured. An analogous practice is the harvest and consumption of unripened pea pods, as is done with snow peas or sugar snap peas.
-
-
-
-Page: Mung bean
-Summary: The mung bean or green gram (Vigna radiata) is a plant species in the legume family. The mung bean is mainly cultivated in East, Southeast, and South Asia. It is used as an ingredient in both savoury and sweet dishes.
-
-
-
-Page: Coffee bean
-Summary: A coffee bean is a seed from the Coffea plant and the source for coffee. This fruit is often referred to as a coffee cherry, but unlike the cherry, which usually contains a single pit, it is a berry with most commonly two seeds with their flat sides together. Even though the seeds are not technically beans, they are referred to as such because of their resemblance to true beans. A fraction of coffee cherries contain a single seed, called a "peaberry". Peaberries make up only around 10% to 15% of all coffee beans. It is a fairly common belief that they have more flavour than normal coffee beans. Like Brazil nuts (a seed) and white rice, coffee beans consist mostly of endosperm.
-The two most economically important varieties of coffee plants are the Arabica and the Robusta; approximately 60% of the coffee produced worldwide is Arabica and ~40% is Robusta. Arabica beans consist of 0.8–1.4% caffeine and Robusta beans consist of 1.7–4.0% caffeine. As coffee is one of the world's most widely consumed beverages, coffee beans are a major cash crop and an important export product, accounting for over 50% of some developing nations' foreign exchange earnings. In 2017, 70% of total coffee production was exported, worth US$19.9 billion. The global coffee industry is massive and valued at $495.50 billion as of 2023, the biggest producer of coffee and coffee beans is Brazil. Other main exporters of coffee beans are Colombia, Vietnam and Ethiopia.
-
-
-
-================================== Ai Message ==================================
-Tool Calls:
-  wikipedia_tool (tool_0_wikipedia_tool)
- Call ID: tool_0_wikipedia_tool
-  Args:
-    query: corn
-
-================================= Tool Message =================================
-Name: wikipedia_tool
-
-Page: Maize
-Summary: Maize (; Zea mays), also known as corn in North American English, is a tall stout grass that produces cereal grain. It was domesticated by indigenous peoples in southern Mexico about 9,000 years ago from wild teosinte. Native Americans planted it alongside beans and squashes in the Three Sisters polyculture. The leafy stalk of the plant gives rise to male inflorescences or tassels which produce pollen, and female inflorescences called ears. The ears yield grain, known as kernels or seeds. In modern commercial varieties, these are usually yellow or white; other varieties can be of many colors.
-Maize relies on humans for its propagation. Since the Columbian exchange, it has become a staple food in many parts of the world, with the total production of maize surpassing that of wheat and rice. Much maize is used for animal feed, whether as grain or as the whole plant, which can either be baled or made into the more palatable silage. Sugar-rich varieties called sweet corn are grown for human consumption, while field corn varieties are used for animal feed, for uses such as cornmeal or masa, corn starch, corn syrup, pressing into corn oil, alcoholic beverages like bourbon whiskey, and as chemical feedstocks including ethanol and other biofuels.
-Maize is cultivated throughout the world; a greater weight of maize is produced each year than any other grain. In 2020, world production was 1.1 billion tonnes. It is afflicted by many pests and diseases; two major insect pests, European corn borer and corn rootworms, have each caused annual losses of a billion dollars in the US. Modern plant breeding has greatly increased output and qualities such as nutrition, drought tolerance, and tolerance of pests and diseases. Much maize is now genetically modified.
-As a food, maize is used to make a wide variety of dishes including Mexican tortillas and tamales, Italian polenta, and American hominy grits. Maize protein is low in some essential amino acids, and the niacin it contains only becomes available if freed by alkali treatment. In pre-Columbian Mesoamerica, maize was deified as a maize god and depicted in sculptures.
-
-
-
-Page: Popcorn
-Summary: Popcorn (also called popped corn, popcorns, or pop-corn) is a variety of corn kernel which expands and puffs up when heated. The term also refers to the snack food produced by the expansion. It is one of the oldest snacks, with evidence of popcorn dating back thousands of years in the Americas.It is commonly eaten salted, buttered, sweetened, or with artificial flavorings. 
-A popcorn kernel's strong hull contains the seed's hard, starchy shell endosperm with 14–20% moisture, which turns to steam as the kernel is heated. Pressure from the steam continues to build until the hull ruptures, allowing the kernel to forcefully expand, to 20 to 50 times its original size, and then cool.
-Some strains of corn (taxonomized as Zea mays) are cultivated specifically as popping corns. The Zea mays variety everta, a special kind of flint corn, is the most common of these. Popcorn is one of six major types of corn, which includes dent corn, flint corn, pod corn, flour corn, and sweet corn.
-
-Page: Sweet corn
-Summary: Sweet corn (Zea mays convar. saccharata var. rugosa), also called sweetcorn, sugar corn and pole corn, is a variety of maize grown for human consumption with a high sugar content. Sweet corn is the result of a naturally occurring recessive mutation in the genes which control conversion of sugar to starch inside the endosperm of the corn kernel. Sweet corn is picked when still immature (the milk stage) and prepared and eaten as a vegetable, unlike field corn, which is harvested when the kernels are dry and mature (dent stage). Since the process of maturation involves converting sugar to starch, sweet corn stores poorly and must be eaten fresh, canned, or frozen, before the kernels become tough and starchy.
-It is one of the six major types of corn, the others being dent corn, flint corn, pod 
-
-================================== Ai Message ==================================
-Tool Calls:
-  wikipedia_tool (tool_0_wikipedia_tool)
- Call ID: tool_0_wikipedia_tool
-  Args:
-    query: bell pepper
-
-================================= Tool Message =================================
-Name: wikipedia_tool
-
-Page: Bell pepper
-Summary: The bell pepper (also known as sweet pepper, paprika, pepper, capsicum  or, in some parts of the US midwest, mango) is the fruit of plants in the Grossum Group of the species Capsicum annuum. Cultivars of the plant produce fruits in different colors, including red, yellow, orange, green, white, chocolate, candy cane striped, and purple. Bell peppers are sometimes grouped with less pungent chili varieties as "sweet peppers". While they are botanically fruits—classified as berries—they are commonly used as a vegetable ingredient or side dish. Other varieties of the genus Capsicum are categorized as chili peppers when they are cultivated for their pungency, including some varieties of Capsicum annuum.
-Peppers are native to Mexico, Central America, the Caribbean and northern South America. Pepper seeds were imported to Spain in 1493 and then spread through Europe and Asia.  Preferred growing conditions for bell peppers include warm, moist soil in a temperature range of 21 to 29 °C (70 to 84 °F).
-
-
-
-Page: Stuffed peppers
-Summary: Stuffed peppers is a dish common in many cuisines. It consists of hollowed or halved bell peppers filled with any of a variety of fillings, often including meat, vegetables, cheese, rice, or sauce. The dish is usually assembled by filling the cavities of the peppers and then cooking. 
-
-
-
-Page: Capsicum annuum
-Summary: Capsicum annuum is a fruiting plant from the family Solanaceae (nightshades), within the genus Capsicum which is native to the northern regions of South America and to southwestern North America. The plant produces berries of many colors including red, green, and yellow, often with pungent taste. It is also one of the oldest cultivated crops, with domestication dating back to around 6,000 years ago in regions of Mexico. The genus Capsicum has over 30 species but Capsicum annuum is the primary species in its genus, as it has been widely cultivated for human consumption for a substantial amount of time and has spread across the world. This species has many uses in culinary applications, medicine, self defense, and can even be ornamental.
+{"web_results": [{"title": "Fruit or Vegetable? Botanical Classification versus Culinary Usage.", "url": "https://www.cityfruit.org/fruit-or-vegetable-botanical-classification-versus-culinary-usage/", "content": "Fruit is botanically classified as the reproductive method of plants, often accomplished by seeds that are consumed and dispersed for further propagation.  Vegetables are part or all of a plant: celery root or stalks, tubers (potatoes, etc.), onions, broccoli stalks, etc. [...] The botanical distinction between fruits and vegetables is anatomical of the plant in question.  For example, a tomato has seeds, which would result in reproduction.  Rhubarb is the stalk of a plant, and has no means of proliferation after consumption.  A tomato is a botanical fruit and rhubarb is botanically a vegetable.  Human use, and particularly Anglo-American use, of these foods are culinarily reversed: tomatoes are generally served in savory dishes and condiments, with rhubarb often [...] Speaking of spice making it nice, ginger: fruit or vegetable?  It’s a rhizome, which means vegetable!  In botany, a rhizome is “a continuously growing horizontal underground stem which puts out lateral shoots and adventitious roots at intervals” by dictionary definition.  Turmeric is also a vegetable and rhizome.  If you want to get really into it, the difference between a rhizome and a tuber (another vegetable, like a potato or yam) is growth, direction and multiplication.  Rhizomes grow", "score": 0.8430832}, {"title": "\"Fruit\" Vs. \"Vegetable\" – What's The Difference? | Dictionary.com", "url": "https://www.dictionary.com/e/fruit-vs-vegetable/", "content": "Technically speaking, a *fruit* is a plant’s developed ovary that comes from a flower and contains one or multiple seeds. The term *vegetable* is much broader—it refers to any part of a plant that’s used for food, including the roots, tubers, stems, and leaves. Many of the foods that we casually call *vegetables*, like tomatoes, are technically *fruits*. Still, it’s a technical distinction that’s usually ignored in practical contexts, such as menus or the layout of the produce section. [...] To a [botanist](https://www.dictionary.com/browse/botanist), the word *[fruit](https://www.dictionary.com/browse/fruit)* specifically refers to the edible part of a seed plant that develops from a flower into a ripened [ovary](https://www.dictionary.com/browse/ovary) that contains one or more seeds—fertilized seeds capable of generating a new plant. *Fruits* come from many different types of plants: apples grow on trees, grapes grow on vines, and blueberries grow on shrubs, for example. The [...] The word *[vegetable](https://www.dictionary.com/browse/vegetable)* tends to make us think of savory (and nonsweet) flavors. But *vegetable* simply means any part of a plant that is grown primarily for food. This can be the leaves (spinach), the root (carrots), the tuber (potatoes), the flower (broccoli), the stalk (celery), or other parts—including the *fruit*. Yes, definitionally speaking, *fruits* are actually just one type of *vegetable* (because they’re an edible part of a plant).", "score": 0.8342047}, {"title": "TIL that \"Fruit\" is a botanical term and \"Vegetable\" is a culinary term ...", "url": "https://www.reddit.com/r/todayilearned/comments/zz5g0/til_that_fruit_is_a_botanical_term_and_vegetable/", "content": "Fruit is a scientific term that is defined as any part of a plant that contains the seed or ovum. A vegetable is any other edible part of a", "score": 0.8282873}]}
 
 ================================== Ai Message ==================================
 
-broccoli, celery, lettuce, sweet potatoes
+sweet potatoes, fresh basil, broccoli, celery, lettuce
 

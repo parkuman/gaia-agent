@@ -22,5 +22,5 @@ Review the chess position provided in the image. It is black's turn. Provide the
 
 ================================== Ai Message ==================================
 
-Re1+
+[TOOL_NEEDED] I am unable to see the image you are referring to. If you provide me with the FEN string of the position, I can analyze it and suggest the best move.
 

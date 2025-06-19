@@ -22,5 +22,5 @@ The attached Excel file contains the sales of menu items for a local fast-food c
 
 ================================== Ai Message ==================================
 
-[TOOL_NEEDED] A tool to read and process data from an Excel file.
+[TOOL_NEEDED] A tool that can read and analyze data from an Excel file is required to answer this question. A tool like a `data_analysis_tool` or `excel_reader_tool` would be appropriate.
 
