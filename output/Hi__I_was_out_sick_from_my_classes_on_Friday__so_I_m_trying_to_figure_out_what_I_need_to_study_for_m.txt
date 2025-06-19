@@ -22,8 +22,10 @@ Hi, I was out sick from my classes on Friday, so I'm trying to figure out what I
 
 Could you please listen to the recording for me and tell me the page numbers I'm supposed to go over? I've attached a file called Homework.mp3 that has the recording. Please provide just the page numbers as a comma-delimited list. And please provide the list in ascending order.
 
+The file for this question is located at: /Users/parker/code/gaia-agent/1f975693-876d-457b-a649-393859e79bf3.mp3
+If you need the file's content, use the read_file_tool.
+
 ================================== Ai Message ==================================
 
-[TOOL_NEEDED]
-Audio transcription capabilities would be helpful.
+[TOOL_NEEDED] a tool that can transcribe audio to text
 

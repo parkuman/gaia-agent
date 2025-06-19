@@ -48,6 +48,7 @@ def run_and_submit_all(profile: gr.OAuthProfile | None):
         response = requests.get(questions_url, timeout=15)
         response.raise_for_status()
         questions_data = response.json()
+        print(questions_data)
         if not questions_data:
             print("Fetched questions list is empty.")
             return "Fetched questions list is empty or invalid format.", None
@@ -70,11 +71,35 @@ def run_and_submit_all(profile: gr.OAuthProfile | None):
     for item in questions_data:
         task_id = item.get("task_id")
         question_text = item.get("question")
+        file_name = item.get("file_name")
         if not task_id or question_text is None:
             print(f"Skipping item with missing task_id or question: {item}")
             continue
+        # --- Download file if file_name is present ---
+        file_path_for_agent = None
+        if file_name:
+            file_url = f"{api_url}/files/{task_id}"
+            local_path = os.path.join(os.getcwd(), file_name)
+            try:
+                print(f"Fetching file for task {task_id} from {file_url} ...")
+                file_response = requests.get(file_url, timeout=30)
+                file_response.raise_for_status()
+                with open(local_path, "wb") as f:
+                    f.write(file_response.content)
+                print(f"Saved file to {local_path}")
+                file_path_for_agent = local_path
+            except Exception as e:
+                print(f"Error fetching file for task {task_id}: {e}")
+                results_log.append(
+                    {"Task ID": task_id, "Question": question_text, "Submitted Answer": f"FILE DOWNLOAD ERROR: {e}"})
+                continue
+        # If file is present, append file path info to question
+        if file_path_for_agent:
+            question_for_agent = f"{question_text}\n\nThe file for this question is located at: {file_path_for_agent}\nIf you need the file's content, use the read_file_tool."
+        else:
+            question_for_agent = question_text
         try:
-            submitted_answer = agent(question_text)
+            submitted_answer = agent(question_for_agent)
             answers_payload.append(
                 {"task_id": task_id, "submitted_answer": submitted_answer})
             results_log.append(

@@ -24,7 +24,11 @@ In your response, please only list the ingredients, not any measurements. So if 
 
 Please format your response as a comma separated list of ingredients. Also, please alphabetize the ingredients.
 
+The file for this question is located at: /Users/parker/code/gaia-agent/99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3.mp3
+If you need the file's content, use the read_file_tool.
+
 ================================== Ai Message ==================================
 
-[TOOL_NEEDED] a tool to transcribe audio to text
+[TOOL_NEEDED]
+A tool that can transcribe audio files to text would be useful for this task.
 

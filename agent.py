@@ -1,5 +1,11 @@
 import os
 import re
+import math
+from typing import Optional
+from urllib.parse import urlparse
+import uuid
+import requests
+import tempfile
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -14,6 +20,59 @@ from langgraph.prebuilt import tools_condition, ToolNode
 
 from langchain_community.document_loaders import WikipediaLoader, ArxivLoader
 from langchain_community.tools.tavily_search import TavilySearchResults
+
+@tool
+def save_and_read_file(content: str, filename: Optional[str] = None) -> str:
+    """
+    Save content to a file and return the path.
+    Args:
+        content (str): the content to save to the file
+        filename (str, optional): the name of the file. If not provided, a random name file will be created.
+    """
+    temp_dir = tempfile.gettempdir()
+    if filename is None:
+        temp_file = tempfile.NamedTemporaryFile(delete=False, dir=temp_dir)
+        filepath = temp_file.name
+    else:
+        filepath = os.path.join(temp_dir, filename)
+
+    with open(filepath, "w") as f:
+        f.write(content)
+
+    return f"File saved to {filepath}. You can read this file to process its contents."
+
+@tool
+def download_file_from_url(url: str, filename: Optional[str] = None) -> str:
+    """
+    Download a file from a URL and save it to a temporary location.
+    Args:
+        url (str): the URL of the file to download.
+        filename (str, optional): the name of the file. If not provided, a random name file will be created.
+    """
+    try:
+        # Parse URL to get filename if not provided
+        if not filename:
+            path = urlparse(url).path
+            filename = os.path.basename(path)
+            if not filename:
+                filename = f"downloaded_{uuid.uuid4().hex[:8]}"
+
+        # Create temporary file
+        temp_dir = tempfile.gettempdir()
+        filepath = os.path.join(temp_dir, filename)
+
+        # Download the file
+        response = requests.get(url, stream=True)
+        response.raise_for_status()
+
+        # Save the file
+        with open(filepath, "wb") as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                f.write(chunk)
+
+        return f"File downloaded to {filepath}. You can read this file to process its contents."
+    except Exception as e:
+        return f"Error downloading file: {str(e)}"
 
 @tool
 def wikipedia_search_tool(query: str) -> str:
@@ -112,6 +171,44 @@ def modulo(a: float, b: float) -> float:
     """
     return a % b
 
+@tool
+def power(a: float, b: float) -> float:
+    """
+    Get the power of two numbers.
+    Args:
+        a (float): the first number
+        b (float): the second number
+    """
+    return a**b
+
+
+@tool
+def square_root(a: float) -> float | complex:
+    """
+    Get the square root of a number.
+    Args:
+        a (float): the number to get the square root of
+    """
+    if a >= 0:
+        return a**0.5
+    return math.sqrt(a)
+
+
+@tool
+def read_file_tool(filepath: str) -> str:
+    """
+    Read the content of a file and return it as a string.
+    Args:
+        filepath (str): The path to the file to read.
+    Returns:
+        str: The content of the file.
+    """
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            return f.read()
+    except Exception as e:
+        return f"Error reading file: {e}"
+
 
 class Agent:
     """A customizable AI agent that can handle various tasks."""
@@ -127,11 +224,16 @@ class Agent:
                         wikipedia_search_tool, 
                         arxiv_search_tool, 
                         web_search_tool, 
+                        download_file_from_url,
+                        save_and_read_file,
+                        read_file_tool,
                         add, 
                         subtract, 
                         multiply, 
                         divide, 
-                        modulo
+                        modulo,
+                        power,
+                        square_root,
                     ]
         self.llm = ChatOpenRouter(model_name=model_name)
         self.llm_with_tools = self.llm.bind_tools(self.tools)

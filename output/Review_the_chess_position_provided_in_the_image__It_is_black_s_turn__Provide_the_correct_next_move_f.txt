@@ -20,7 +20,10 @@ Guidelines:
 
 Review the chess position provided in the image. It is black's turn. Provide the correct next move for black which guarantees a win. Please provide your response in algebraic notation.
 
+The file for this question is located at: /Users/parker/code/gaia-agent/cca530fc-4052-43b2-b130-b30968d8aa44.png
+If you need the file's content, use the read_file_tool.
+
 ================================== Ai Message ==================================
 
-[TOOL_NEEDED] I am unable to see the image you are referring to. If you provide me with the FEN string of the position, I can analyze it and suggest the best move.
+[TOOL_NEEDED] The ability to analyze a chess position from an image.
 

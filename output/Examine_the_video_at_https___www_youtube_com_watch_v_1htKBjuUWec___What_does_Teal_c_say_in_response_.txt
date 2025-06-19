@@ -24,5 +24,6 @@ What does Teal'c say in response to the question "Isn't that hot?"
 
 ================================== Ai Message ==================================
 
-[TOOL_NEEDED] A tool that can analyze video content.
+[TOOL_NEEDED]
+youtube_video_transcript_tool
 
