@@ -262,7 +262,7 @@ def square_root(a: float) -> float | complex:
 class Agent:
     """A customizable AI agent that can handle various tasks."""
 
-    def __init__(self, model_name: str = "google/gemini-2.0-flash-exp:free"):
+    def __init__(self, model_name: str = "mistralai/mistral-small-3.2-24b-instruct-2506:free"):
         """Initialize the agent with a specified model.
 
         Args:
