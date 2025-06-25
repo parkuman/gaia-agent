@@ -117,8 +117,9 @@ def run_and_submit_all(profile: gr.OAuthProfile | None):
     # 4. Prepare Submission
     submission_data = {"username": username.strip(
     ), "agent_code": agent_code, "answers": answers_payload}
-    status_update = f"Agent finished. Submitting {
-        len(answers_payload)} answers for user '{username}'..."
+    status_update = (
+        f"Agent finished. Submitting {len(answers_payload)} answers for user '{username}'..."
+    )
     print(status_update)
 
     # 5. Submit
