@@ -149,8 +149,7 @@ def wikipedia_search_tool(query: str) -> str:
     wiki_docs = WikipediaLoader(query=query, load_max_docs=2).load()
     formatted_search_docs = "\n\n---\n\n".join(
         [
-            f'<Document source="{doc.metadata["source"]}" page="{
-                doc.metadata.get("page", "")}"/>\n{doc.page_content}\n</Document>'
+            f'<Document source="{doc.metadata["source"]}" page="{doc.metadata.get("page", "")}"/>\n{doc.page_content}\n</Document>'
             for doc in wiki_docs
         ]
     )
@@ -175,8 +174,7 @@ def arxiv_search_tool(query: str) -> str:
     arxiv_docs = ArxivLoader(query=query, load_max_docs=3).load()
     formatted_search_docs = "\n\n---\n\n".join(
         [
-            f'<Document source="{doc.metadata["source"]}" page="{
-                doc.metadata.get("page", "")}"/>\n{doc.page_content[:1000]}\n</Document>'
+            f'<Document source="{doc.metadata["source"]}" page="{doc.metadata.get("page", "")}"/>\n{doc.page_content[:1000]}\n</Document>'
             for doc in arxiv_docs
         ]
     )
