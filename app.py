@@ -1,7 +1,6 @@
 import os
 import gradio as gr
 import requests
-import inspect
 import pandas as pd
 from agent import Agent  # Import our custom Agent class
 
@@ -11,6 +10,7 @@ DEFAULT_API_URL = "https://agents-course-unit4-scoring.hf.space"
 
 # --- Basic Agent Definition ---
 # ----- THIS IS WERE YOU CAN BUILD WHAT YOU WANT ------
+
 
 def run_and_submit_all(profile: gr.OAuthProfile | None):
     """
@@ -95,7 +95,8 @@ def run_and_submit_all(profile: gr.OAuthProfile | None):
                 continue
         # If file is present, append file path info to question
         if file_path_for_agent:
-            question_for_agent = f"{question_text}\n\nThe file for this question is located at: {file_path_for_agent}\nIf you need the file's content, use the read_file_tool."
+            question_for_agent = f"{question_text}\n\nThe file for this question is located at: {
+                file_path_for_agent}\nIf you need the file's content, use the read_file_tool."
         else:
             question_for_agent = question_text
         try:

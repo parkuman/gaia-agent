@@ -31,4 +31,3 @@ class ChatOpenRouter(ChatOpenAI):
 # openrouter_model = ChatOpenRouter(
 #     model_name="qwen/qwen2.5-vl-72b-instruct:free"
 # )
-

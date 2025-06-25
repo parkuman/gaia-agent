@@ -1,3 +1,12 @@
+from langchain_community.tools.tavily_search import TavilySearchResults
+from langchain_community.document_loaders import WikipediaLoader, ArxivLoader, YoutubeLoader
+from langgraph.prebuilt import tools_condition, ToolNode
+from langchain_core.tools import tool
+from langchain_core.messages import HumanMessage, SystemMessage
+from langgraph.checkpoint.memory import MemorySaver
+from langgraph.graph import MessagesState
+from langgraph.graph import StateGraph, START
+from openrouter import ChatOpenRouter
 import os
 import re
 import math
@@ -12,16 +21,6 @@ from pydub import AudioSegment
 
 load_dotenv()
 
-from openrouter import ChatOpenRouter
-from langgraph.graph import StateGraph, START
-from langgraph.graph import MessagesState
-from langgraph.checkpoint.memory import MemorySaver
-from langchain_core.messages import HumanMessage, SystemMessage
-from langchain_core.tools import tool
-from langgraph.prebuilt import tools_condition, ToolNode
-
-from langchain_community.document_loaders import WikipediaLoader, ArxivLoader, YoutubeLoader
-from langchain_community.tools.tavily_search import TavilySearchResults
 
 @tool
 def transcribe_audio_file_tool(filepath: str) -> str:
@@ -35,24 +34,23 @@ def transcribe_audio_file_tool(filepath: str) -> str:
     try:
         # Load the Whisper model (will download on first use)
         model = whisper.load_model("tiny")
-        
+
         # Convert audio to wav if it's not already (Whisper expects PCM WAV)
         audio = AudioSegment.from_file(filepath)
-        
+
         # Create a temporary WAV file
         temp_wav = tempfile.NamedTemporaryFile(suffix=".wav", delete=False)
         audio.export(temp_wav.name, format="wav")
-        
+
         # Transcribe the audio
         result = model.transcribe(temp_wav.name)
-        
+
         # Clean up temporary file
         os.unlink(temp_wav.name)
-        
+
         return result["text"]
     except Exception as e:
         return f"Error transcribing audio file: {e}"
-
 
 
 @tool
@@ -64,7 +62,8 @@ def youtube_transcript_tool(youtube_video_url: str) -> str:
     Returns:
         The transcript of the youtube video as text
     """
-    youtube_transcript = YoutubeLoader.from_youtube_url(youtube_url=youtube_video_url).load()
+    youtube_transcript = YoutubeLoader.from_youtube_url(
+        youtube_url=youtube_video_url).load()
     return youtube_transcript
 
 
@@ -82,6 +81,7 @@ def read_text_file_tool(filepath: str) -> str:
             return f.read()
     except Exception as e:
         return f"Error reading file: {e}"
+
 
 @tool
 def write_content_to_file(content: str, filename: Optional[str] = None) -> str:
@@ -102,6 +102,7 @@ def write_content_to_file(content: str, filename: Optional[str] = None) -> str:
         f.write(content)
 
     return f"File saved to {filepath}. You can read this file to process its contents."
+
 
 @tool
 def download_file_from_url(url: str, filename: Optional[str] = None) -> str:
@@ -136,6 +137,7 @@ def download_file_from_url(url: str, filename: Optional[str] = None) -> str:
     except Exception as e:
         return f"Error downloading file: {str(e)}"
 
+
 @tool
 def wikipedia_search_tool(query: str) -> str:
     """Query Wikipedia and return a max of 2 results.
@@ -147,7 +149,8 @@ def wikipedia_search_tool(query: str) -> str:
     wiki_docs = WikipediaLoader(query=query, load_max_docs=2).load()
     formatted_search_docs = "\n\n---\n\n".join(
         [
-            f'<Document source="{doc.metadata["source"]}" page="{doc.metadata.get("page", "")}"/>\n{doc.page_content}\n</Document>'
+            f'<Document source="{doc.metadata["source"]}" page="{
+                doc.metadata.get("page", "")}"/>\n{doc.page_content}\n</Document>'
             for doc in wiki_docs
         ]
     )
@@ -172,7 +175,8 @@ def arxiv_search_tool(query: str) -> str:
     arxiv_docs = ArxivLoader(query=query, load_max_docs=3).load()
     formatted_search_docs = "\n\n---\n\n".join(
         [
-            f'<Document source="{doc.metadata["source"]}" page="{doc.metadata.get("page", "")}"/>\n{doc.page_content[:1000]}\n</Document>'
+            f'<Document source="{doc.metadata["source"]}" page="{
+                doc.metadata.get("page", "")}"/>\n{doc.page_content[:1000]}\n</Document>'
             for doc in arxiv_docs
         ]
     )
@@ -233,6 +237,7 @@ def modulo(a: float, b: float) -> float:
     """
     return a % b
 
+
 @tool
 def power(a: float, b: float) -> float:
     """
@@ -256,11 +261,10 @@ def square_root(a: float) -> float | complex:
     return math.sqrt(a)
 
 
-
 class Agent:
     """A customizable AI agent that can handle various tasks."""
 
-    def __init__(self, model_name: str = "google/gemini-2.5-pro-preview"):
+    def __init__(self, model_name: str = "google/gemini-2.0-flash-exp:free"):
         """Initialize the agent with a specified model.
 
         Args:
@@ -268,22 +272,22 @@ class Agent:
         """
 
         self.tools = [
-                        wikipedia_search_tool, 
-                        arxiv_search_tool, 
-                        web_search_tool, 
-                        download_file_from_url,
-                        write_content_to_file,
-                        read_text_file_tool,
-                        youtube_transcript_tool,
-                        transcribe_audio_file_tool,
-                        add, 
-                        subtract, 
-                        multiply, 
-                        divide, 
-                        modulo,
-                        power,
-                        square_root,
-                    ]
+            wikipedia_search_tool,
+            arxiv_search_tool,
+            web_search_tool,
+            download_file_from_url,
+            write_content_to_file,
+            read_text_file_tool,
+            youtube_transcript_tool,
+            transcribe_audio_file_tool,
+            add,
+            subtract,
+            multiply,
+            divide,
+            modulo,
+            power,
+            square_root,
+        ]
         self.llm = ChatOpenRouter(model_name=model_name)
         self.llm_with_tools = self.llm.bind_tools(self.tools)
 
