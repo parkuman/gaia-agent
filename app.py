@@ -95,8 +95,7 @@ def run_and_submit_all(profile: gr.OAuthProfile | None):
                 continue
         # If file is present, append file path info to question
         if file_path_for_agent:
-            question_for_agent = f"{question_text}\n\nThe file for this question is located at: {
-                file_path_for_agent}\nIf you need the file's content, use the read_file_tool."
+            question_for_agent = f"{question_text}\n\nThe file for this question is located at: {file_path_for_agent}\nIf you need the file's content, use the read_file_tool."
         else:
             question_for_agent = question_text
         try:
@@ -115,11 +114,8 @@ def run_and_submit_all(profile: gr.OAuthProfile | None):
         return "Agent did not produce any answers to submit.", pd.DataFrame(results_log)
 
     # 4. Prepare Submission
-    submission_data = {"username": username.strip(
-    ), "agent_code": agent_code, "answers": answers_payload}
-    status_update = (
-        f"Agent finished. Submitting {len(answers_payload)} answers for user '{username}'..."
-    )
+    submission_data = {"username": username.strip(), "agent_code": agent_code, "answers": answers_payload}
+    status_update = f"Agent finished. Submitting {len(answers_payload)} answers for user '{username}'..."
     print(status_update)
 
     # 5. Submit
@@ -128,24 +124,15 @@ def run_and_submit_all(profile: gr.OAuthProfile | None):
         response = requests.post(submit_url, json=submission_data, timeout=60)
         response.raise_for_status()
         result_data = response.json()
-        final_status = (
-            f"Submission Successful!\n"
-            f"User: {result_data.get('username')}\n"
-            f"Overall Score: {result_data.get('score', 'N/A')}% "
-            f"({result_data.get('correct_count', '?')
-                }/{result_data.get('total_attempted', '?')} correct)\n"
-            f"Message: {result_data.get('message', 'No message received.')}"
-        )
+        final_status = f"Submission Successful!\nUser: {result_data.get('username')}\nOverall Score: {result_data.get('score', 'N/A')}% ({result_data.get('correct_count', '?')}/{result_data.get('total_attempted', '?')} correct)\nMessage: {result_data.get('message', 'No message received.')}"
         print("Submission successful.")
         results_df = pd.DataFrame(results_log)
         return final_status, results_df
     except requests.exceptions.HTTPError as e:
-        error_detail = f"Server responded with status {
-            e.response.status_code}."
+        error_detail = f"Server responded with status {e.response.status_code}."
         try:
             error_json = e.response.json()
-            error_detail += f" Detail: {
-                error_json.get('detail', e.response.text)}"
+            error_detail += f" Detail: {error_json.get('detail', e.response.text)}"
         except requests.exceptions.JSONDecodeError:
             error_detail += f" Response: {e.response.text[:500]}"
         status_message = f"Submission Failed: {error_detail}"
