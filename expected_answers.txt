@@ -3,3 +3,6 @@ A: FunkMonk
 
 Q: Who did the actor who played Ray in the Polish-language version of Everybody Loves Raymond play in Magda M.? Give only the first name.
 A: Sebastian  https://en.wikipedia.org/wiki/Magda_M.
+
+Q: What is the final numeric output from the attached Python code?
+A: 0

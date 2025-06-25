@@ -7,6 +7,8 @@ import uuid
 import requests
 import tempfile
 from dotenv import load_dotenv
+import whisper
+from pydub import AudioSegment
 
 load_dotenv()
 
@@ -18,11 +20,71 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_core.tools import tool
 from langgraph.prebuilt import tools_condition, ToolNode
 
-from langchain_community.document_loaders import WikipediaLoader, ArxivLoader
+from langchain_community.document_loaders import WikipediaLoader, ArxivLoader, YoutubeLoader
 from langchain_community.tools.tavily_search import TavilySearchResults
 
 @tool
-def save_and_read_file(content: str, filename: Optional[str] = None) -> str:
+def transcribe_audio_file_tool(filepath: str) -> str:
+    """
+    Read an audio file and transcribe it using Whisper.
+    Args:
+        filepath (str): The path to the audio file (supports mp3, wav, etc.)
+    Returns:
+        str: The transcribed text from the audio file
+    """
+    try:
+        # Load the Whisper model (will download on first use)
+        model = whisper.load_model("tiny")
+        
+        # Convert audio to wav if it's not already (Whisper expects PCM WAV)
+        audio = AudioSegment.from_file(filepath)
+        
+        # Create a temporary WAV file
+        temp_wav = tempfile.NamedTemporaryFile(suffix=".wav", delete=False)
+        audio.export(temp_wav.name, format="wav")
+        
+        # Transcribe the audio
+        result = model.transcribe(temp_wav.name)
+        
+        # Clean up temporary file
+        os.unlink(temp_wav.name)
+        
+        return result["text"]
+    except Exception as e:
+        return f"Error transcribing audio file: {e}"
+
+
+
+@tool
+def youtube_transcript_tool(youtube_video_url: str) -> str:
+    """
+    Returns a text transcript of a provided youtube video URL.
+    Args:
+        youtube_video_urL (urL): The url of the video you want the transcript for.
+    Returns:
+        The transcript of the youtube video as text
+    """
+    youtube_transcript = YoutubeLoader.from_youtube_url(youtube_url=youtube_video_url).load()
+    return youtube_transcript
+
+
+@tool
+def read_text_file_tool(filepath: str) -> str:
+    """
+    Read the content of a file and return it as a string.
+    Args:
+        filepath (str): The path to the file to read.
+    Returns:
+        str: The content of the file.
+    """
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            return f.read()
+    except Exception as e:
+        return f"Error reading file: {e}"
+
+@tool
+def write_content_to_file(content: str, filename: Optional[str] = None) -> str:
     """
     Save content to a file and return the path.
     Args:
@@ -194,21 +256,6 @@ def square_root(a: float) -> float | complex:
     return math.sqrt(a)
 
 
-@tool
-def read_file_tool(filepath: str) -> str:
-    """
-    Read the content of a file and return it as a string.
-    Args:
-        filepath (str): The path to the file to read.
-    Returns:
-        str: The content of the file.
-    """
-    try:
-        with open(filepath, 'r', encoding='utf-8') as f:
-            return f.read()
-    except Exception as e:
-        return f"Error reading file: {e}"
-
 
 class Agent:
     """A customizable AI agent that can handle various tasks."""
@@ -225,8 +272,10 @@ class Agent:
                         arxiv_search_tool, 
                         web_search_tool, 
                         download_file_from_url,
-                        save_and_read_file,
-                        read_file_tool,
+                        write_content_to_file,
+                        read_text_file_tool,
+                        youtube_transcript_tool,
+                        transcribe_audio_file_tool,
                         add, 
                         subtract, 
                         multiply, 

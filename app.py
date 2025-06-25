@@ -79,7 +79,7 @@ def run_and_submit_all(profile: gr.OAuthProfile | None):
         file_path_for_agent = None
         if file_name:
             file_url = f"{api_url}/files/{task_id}"
-            local_path = os.path.join(os.getcwd(), file_name)
+            local_path = os.path.join(os.getcwd(), 'question_files', file_name)
             try:
                 print(f"Fetching file for task {task_id} from {file_url} ...")
                 file_response = requests.get(file_url, timeout=30)

@@ -10,4 +10,10 @@ wikipedia
 duckduckgo-search
 python-dotenv
 tavily-python
+youtube-transcript-api
+
 arxiv
+pymupdf
+pydub
+git+https://github.com/openai/whisper.git
+

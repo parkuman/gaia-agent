@@ -20,23 +20,23 @@ Guidelines:
 
 The attached Excel file contains the sales of menu items for a local fast-food chain. What were the total sales that the chain made from food (not including drinks)? Express your answer in USD with two decimal places.
 
-The file for this question is located at: /Users/parker/code/gaia-agent/7bd855d8-463d-4ed5-93ca-5fe35145f733.xlsx
+The file for this question is located at: /Users/parker/code/gaia-agent/question_files/7bd855d8-463d-4ed5-93ca-5fe35145f733.xlsx
 If you need the file's content, use the read_file_tool.
 
 ================================== Ai Message ==================================
 Tool Calls:
-  read_file_tool (tool_0_read_file_tool)
- Call ID: tool_0_read_file_tool
+  read_text_file_tool (tool_0_read_text_file_tool)
+ Call ID: tool_0_read_text_file_tool
   Args:
-    filepath: /Users/parker/code/gaia-agent/7bd855d8-463d-4ed5-93ca-5fe35145f733.xlsx
+    filepath: /Users/parker/code/gaia-agent/question_files/7bd855d8-463d-4ed5-93ca-5fe35145f733.xlsx
 
 ================================= Tool Message =================================
-Name: read_file_tool
+Name: read_text_file_tool
 
 Error reading file: 'utf-8' codec can't decode byte 0xe0 in position 10: invalid continuation byte
 
 ================================== Ai Message ==================================
 
 [TOOL_NEEDED]
-A tool that can read and process excel files. i.e. a python environment with the pandas library.
+A tool that can read and parse data from an Excel file. I would use this tool to extract the menu item sales data, filter out the drinks, and then sum the sales of the remaining food items.
 

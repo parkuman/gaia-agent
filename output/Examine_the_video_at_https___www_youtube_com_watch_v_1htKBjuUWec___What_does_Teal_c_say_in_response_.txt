@@ -23,7 +23,18 @@ Examine the video at https://www.youtube.com/watch?v=1htKBjuUWec.
 What does Teal'c say in response to the question "Isn't that hot?"
 
 ================================== Ai Message ==================================
+Tool Calls:
+  youtube_transcript_tool (tool_0_youtube_transcript_tool)
+ Call ID: tool_0_youtube_transcript_tool
+  Args:
+    youtube_video_url: https://www.youtube.com/watch?v=1htKBjuUWec
 
-[TOOL_NEEDED]
-youtube_video_transcript_tool
+================================= Tool Message =================================
+Name: youtube_transcript_tool
+
+[Document(metadata={'source': '1htKBjuUWec'}, page_content="Wow this coffee's great I was just thinking that yeah is that cinnamon chicory tea oak [Music] isn't that hot extremely")]
+
+================================== Ai Message ==================================
+
+Extremely
 

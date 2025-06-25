@@ -20,18 +20,18 @@ Guidelines:
 
 What is the final numeric output from the attached Python code?
 
-The file for this question is located at: /Users/parker/code/gaia-agent/f918266a-b3e0-4914-865d-4faa564f1aef.py
+The file for this question is located at: /Users/parker/code/gaia-agent/question_files/f918266a-b3e0-4914-865d-4faa564f1aef.py
 If you need the file's content, use the read_file_tool.
 
 ================================== Ai Message ==================================
 Tool Calls:
-  read_file_tool (tool_0_read_file_tool)
- Call ID: tool_0_read_file_tool
+  read_text_file_tool (tool_0_read_text_file_tool)
+ Call ID: tool_0_read_text_file_tool
   Args:
-    filepath: /Users/parker/code/gaia-agent/f918266a-b3e0-4914-865d-4faa564f1aef.py
+    filepath: /Users/parker/code/gaia-agent/question_files/f918266a-b3e0-4914-865d-4faa564f1aef.py
 
 ================================= Tool Message =================================
-Name: read_file_tool
+Name: read_text_file_tool
 
 from random import randint
 import time
