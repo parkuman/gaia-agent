@@ -14,6 +14,8 @@ hf_oauth_expiration_minutes: 480
 
 # HF Agents Course - GAIA Agent
 
+See the [space on Hugging Face](https://huggingface.co/spaces/parkuman/gaia-agent)
+
 The goal of this agent is to get at least 30 points on the validation set questions for the GAIA benchmark.
 
 ## Fetching and submitting questions/answers
